@@ -9,8 +9,7 @@ sbit led2=P2^1;
 
 void main(void)
 {
-	led1=0;
-	led2=0;
+	P2=0x00;
 	
 	while(1)
 	{
