@@ -9,11 +9,11 @@ unsigned char count;
 
 void main(void)
 {
-	P2=0x00;
+	P2=0x00;                              //set as output port
 	
-	for(count=0xFF;count=0x00;count--)
+	for(count=0xFF;count<=0x00;count--)  //downcounter
 	{
-		P2=count;
-		delay(500);
+		P2=count;                          //show downcounting value from 0xff to 0x00 with 1s delay
+		delay(1000);                      //delay of 1s
 	}
 }
