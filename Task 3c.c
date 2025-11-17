@@ -9,8 +9,9 @@ unsigned char sum,a=0x1B,b=0x6C;
 
 void main(void)
 {
-	P2=0x00;
+	P2=0x00;    //set as output port
 	
-	sum=a+b;
-	P2=sum;
+	sum=a+b;    //calculate sum of a and b
+	P2=sum;     //display sum in port two taht is led array
 }
+
