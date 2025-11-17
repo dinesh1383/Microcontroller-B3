@@ -5,16 +5,12 @@
 
 #include<MicroLABlet.h>
 
-unsigned char sum,a=0xFB,b=0x6C;
+unsigned char sum,a=0x1B,b=0x6C;
 
 void main(void)
 {
 	P2=0x00;
 	
 	sum=a+b;
-	P2=a;
-	delay(1000);
-	P2=b;
-	delay(1000);
 	P2=sum;
 }
