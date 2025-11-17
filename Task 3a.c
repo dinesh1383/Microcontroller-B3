@@ -8,13 +8,14 @@ sbit led=P2^4;
 
 void main(void)
 {
-	led=0;
+	P2=0x00;  //set as output port
 	
 	while(1)
 	{
-		led=1;
-		delay(1000);
-		led=0;
-		delay(1000);
+		led=1;             //turn on fifth led
+		delay(1000);       //delay
+		led=0;             //turn off fifth led
+		delay(1000);       //delay
 	}
+
 }
