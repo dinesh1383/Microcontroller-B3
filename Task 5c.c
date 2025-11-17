@@ -4,3 +4,31 @@
 //TASK 2C
 
 #include<reg51.h>
+
+unsigned char idata *internalmemory=0x20;
+unsigned char count,a[10],temp;
+
+void main(void)
+{
+
+	P2=0x00;
+	
+	for(count=0;count<10;count++)
+	{
+		a[count]=*internalmemory;
+		*internalmemory++;
+	}
+	
+	temp=a[0];
+	
+	for(count=0;count<10;count++)
+	{
+    if(a[count]<temp)
+		{
+			temp=a[count];
+		}
+	}
+	P2=temp;
+}
+	
+	
